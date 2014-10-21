@@ -1,0 +1,17 @@
+/*
+We need some l33t looks for this.
+*/
+body {
+	background-color: #000000;
+    color: #00FF00;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+.warning 
+{
+	color:#FF0000;
+}
+#encryptionKey, #publicEncryptionKey
+{
+	width: 580px;
+	height: 100px;
+}

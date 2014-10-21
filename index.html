@@ -1,9 +1,68 @@
 <html>
 <head>
 	<title>Paranoid Phobia</title>
-	<style type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+	<div id="wrapper">
+		<h3>Paranoid Phobia</h3>
+		<p>This application allows you to secure your file transfers, through untrusted networks.</p>
+		<p>Potential evesdroppers will only get garbarge. The sending party won't even be able to decrypt the file themself.</p>
+		<p>
+			<strong>How does this work?</strong>
+			<ul>
+				<li>You will start by generating an in-memory key-pair using this app.</li>
+				<li>You will send the provided messaging key to your friend.</li>
+				<li>Your friend will use this app to encrypt his file with the messaging key you generated.</li>
+				<li>He will then send you the encrypted file through any channel. It won't ever touch our servers.</li>
+				<li>You (and only you) will be able to open the file on this page and decrypt it.</li>
+			</ul>
+		</p>
+		<h4 class="warning">Please note!</h4>
+		<p>Nothing is entirely secure. Not this page, not some expensive software product and not even your own hardware.</p>
+		<p>
+			A list of things that could go wrong (inconclusive)
+			<ul>
+				<li>This site source code was changed on the fly by a MiTM attack, by an evil 3rd-party (can be prevented to some degree by using SSL).</li>
+				<li>The source code was changed on the server. Sorry, I can't help.</li>
+				<li>One or more of the libraries used has security bugs that make them vulnerable.</li>
+				<li>One or more of the libraries include backdoors.</li>
+				<li>The messaging key was intercepted and changed on the fly. The files sent back to you needs to be intercepted too, and reencrypted with your real key, for you not to notice.</li>
+				<li>Your computer is compromised. Nothing protects against backdoors on your own system.</li>
+			</ul>
+		</p>
+		<p>As you can see, lots of things can go wrong. But it's still way more secure than using Facebook chat to send your unencrypted files. Always use multiple layers of defense, and feel free to re-encrypt these files with other methods also. 
+		<br /><strong class="warning">Don't EVER risk your life. Exchange sensitive material offline. Nothing digital can be trusted these days..</strong>
+		</p>
 
+		<p>
+			<strong>Choose a file:</strong>
+			<input type="file" id="toEncryptDecrypt" />
+			<p>
+				<strong>Send secure file to someone else</strong>
+				<br />
+				<textarea id="encryptionKey" placeholder="The public message key from the intended receiver"></textarea>
+				<br />
+				<button id="encryptBtn">Encrypt file</button> 
+			</p>
+			<p>
+				<strong>Receive a secure file</strong>
+				<br />
+				Please generate a secure identity, and get the key below. <br />
+				Send this to the sending party and keep this tab open.
+				<br />
+				<textarea id="publicEncryptionKey" placeholder="Please generate a secure identity."></textarea>
+				<br />
+				<strong id="secureIdentityMessage">You don't have any secure identity yet.</strong> <button id="newIdentityBtn">Generate new identity</button>
+				<br />
+				<button id="decryptBtn">Decrypt file</button>
+			</p>
+		</p>
+	</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/aes.js"></script>
+<script type="text/javascript" src="js/jsencrypt.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
