@@ -72,6 +72,9 @@ But yeah, an attacker could _potentially_ intercept the public key, generate his
 
 As I said before, try and mix it up! Send the public key through one channel, and send it through another (at random), just sothe sending party can compare them. And then get the encrypted file back through a third channel!
 
+###Why don't you just use OpenSSL or FancyXYZ?
+Cause it's complicated. This is simple. It's a ZIP file you download, keep around, and use when needed. It's pressing buttons and copy pasting stuff. Nothing crazy. If you don't like it, use whatever you want. I actually advise you to use different tools, and encrypt the files multiple times, to layer the security.
+
 
 ###Sooo... is this ready for business purposes and backed by an 100% security guarantee?
 Nope. Not even close! I won't and can't be help responsible for any problems, damage or leaked information, arising from trusting this software.
