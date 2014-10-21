@@ -51,6 +51,9 @@ The file encrypted format is as follows:
 
 As you can see, we won't even leak the filename of the file, during transmission. The only information leakage which might occur, is the filesize. This might be mitigated in a future version.
 
+###I took at look: Your code is a mess!
+I don't care. Take it or leave it. I mostly code PHP (Laravel, and following best practives as by Brandon Savages book). This was a fun little project completed in 4 hours total and will likely never get cleaned up.
+
 ###How secure is this?
 Depends on how you use it and who you are protecting yourself against. If you are protecting yourself against the NSA, good luck. They will install hardware keyloggers, infect this while you are downloading it, or maybe just drug you and beat you with a wrench. You are screwed no matter what! 
 
